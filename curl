@@ -1,0 +1,12 @@
+#!/bin/python3
+try:
+    from requests import get
+except:
+    import os
+    os.system("pip install requests")
+import sys
+try:
+    curl = get(sys.argv[1]).text
+    print(curl)
+except:
+    print("curl https://example.com")
